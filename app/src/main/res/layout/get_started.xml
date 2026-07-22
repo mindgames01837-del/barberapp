@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/black">
+
+    <!--  ═══════════════════════════════════════  -->
+    <!--          FULL-BLEED PHOTO CARD           -->
+    <!--  ═══════════════════════════════════════  -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <!--  Barber photo  -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/barberowner1"/>
+
+        <!--  Dark gradient overlay for text legibility  -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_findbarber_overlay"/>
+
+        <!--  Red outer frame border  -->
+
+        <!--  ─── Bottom content block ───  -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_findbarber_frame" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:paddingBottom="36dp">
+
+            <!--  Eyebrow text  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Find the"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <!--  Headline  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_extrabold"
+                android:letterSpacing="-0.02"
+                android:text="ROLL'N CUTS"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <!--  Subtext  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="78dp"
+                android:lineSpacingMultiplier="1.3"
+                android:text="Find a barber close to you and book at your convenience"
+                android:textColor="@color/gray_light"
+                android:textSize="23sp"/>
+
+
+            <!--  ─── Get Started pill button ───  -->
+            <RelativeLayout
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/bg_btn_pill_red"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Get Started"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <!--  ─── Login link ───  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account? "
+                    android:textColor="@color/gray_light"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Log in"
+                    android:textColor="@color/blue_mid"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

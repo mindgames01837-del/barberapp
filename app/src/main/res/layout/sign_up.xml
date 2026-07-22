@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0A0A0A">
+    <!--  ═══════════════════════════════════════  -->
+    <!--               HERO HEADER                -->
+    <!--  ═══════════════════════════════════════  -->
+    <FrameLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="240dp">
+        <!--  Dark background base  -->
+        <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#1A1A2E"/>
+        <!--  Barber hero image  -->
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.35" android:scaleType="centerCrop" android:src="@drawable/barberowner"/>
+        <!--  Dark gradient overlay  -->
+        <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_hero_gradient"/>
+        <!--  Brand Row: Logo + Name  -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginTop="52dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <!--  Logo mark box (red for sign up)  -->
+            <FrameLayout android:layout_width="38dp" android:layout_height="38dp" android:background="@drawable/bg_logo_mark_red">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="center" android:src="@drawable/ic_scissors" />
+            </FrameLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_extrabold" android:letterSpacing="0.12" android:text="ROLL'N CUTS" android:textColor="#FFFFFF" android:textSize="24sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:letterSpacing="0.12" android:text="PREMIUM HAIR FASHION CUTS" android:textColor="#888888" android:textSize="9sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--  Hero Tagline (red accent)  -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_marginBottom="44dp" android:layout_marginStart="20dp" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_extrabold" android:letterSpacing="-0.02" android:lineSpacingMultiplier="1.05" android:text="Join the" android:textColor="#FFFFFF" android:textSize="28sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_extrabold" android:letterSpacing="-0.02" android:text="Crew." android:textColor="#EF5350" android:textSize="28sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Create your account and book your first cut" android:textColor="#888888" android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/successBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#2E7D32"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="✓ Successfully done!"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:letterSpacing="0.02"/>
+        </LinearLayout>
+            </FrameLayout>
+    <!--  ═══════════════════════════════════════  -->
+    <!--               FORM CARD                  -->
+    <!--  ═══════════════════════════════════════  -->
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/header" android:layout_marginTop="-20dp" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_login_container" android:orientation="vertical" android:paddingTop="14dp" android:paddingBottom="32dp" android:paddingStart="24dp" android:paddingEnd="24dp">
+            <!--  Drag handle  -->
+            <View android:layout_width="36dp" android:layout_height="3dp" android:layout_gravity="center_horizontal" android:layout_marginBottom="20dp" android:background="#E0E0E0"/>
+            <!--  Form title  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_extrabold" android:letterSpacing="-0.02" android:text="Sign Up" android:textColor="#0A0A0A" android:textSize="22sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginBottom="22dp" android:text="Create your account — takes 30 seconds" android:textColor="#888888" android:textSize="11sp"/>
+            <!--  ─── Full Name Field ───  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp"  android:fontFamily="@font/inter_bold" android:letterSpacing="0.06" android:text="FULL NAME" android:textColor="#444444" android:textSize="10sp"/>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etFullName" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_field_default" android:drawableStart="@drawable/ic_user" android:drawablePadding="10dp" android:hint="Your full name" android:inputType="textPersonName" android:paddingStart="38dp" android:paddingEnd="14dp" android:textColor="#0A0A0A" android:textColorHint="#C8C8C8" android:textSize="13sp"/>
+            </FrameLayout>
+            <!--  ─── Email Field ───  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:fontFamily="@font/inter_bold" android:letterSpacing="0.06" android:text="EMAIL ADDRESS" android:textColor="#444444" android:textSize="10sp"/>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_field_active_red" android:drawableStart="@drawable/ic_email" android:drawablePadding="10dp" android:hint="you@email.com" android:inputType="textEmailAddress" android:paddingStart="38dp" android:paddingEnd="14dp" android:textColor="#0A0A0A" android:textColorHint="#C8C8C8" android:textSize="13sp"/>
+            </FrameLayout>
+            <!--  ─── Password Field ───  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/inter_bold"
+                android:letterSpacing="0.06"
+                android:text="PASSWORD"
+                android:textColor="#444444"
+                android:textSize="10sp"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_field_default"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:hint="Create a strong password"
+                    android:inputType="textPassword"
+                    android:paddingStart="38dp"
+                    android:paddingEnd="40dp"
+                    android:textColor="#0A0A0A"
+                    android:textColorHint="#C8C8C8"
+                    android:textSize="13sp"/>
+
+                <!--  Eye toggle  -->
+                <ImageView
+                    android:id="@+id/ivTogglePassword"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_eye"/>
+
+            </FrameLayout>
+            <!--  Password Strength Bar  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="16dp" android:orientation="horizontal">
+                <View android:id="@+id/strengthBar1" android:layout_width="0dp" android:layout_height="3dp" android:layout_marginEnd="3dp" android:layout_weight="1" android:background="#C62828"/>
+                <View  android:id="@+id/strengthBar2" android:layout_width="0dp" android:layout_height="3dp" android:layout_marginEnd="3dp" android:layout_weight="1" android:background="#F5A623"/>
+                <View android:id="@+id/strengthBar3" android:layout_width="0dp" android:layout_height="3dp" android:layout_marginEnd="3dp" android:layout_weight="1" android:background="#E8E8E8"/>
+                <View android:id="@+id/strengthBar4" android:layout_width="0dp" android:layout_height="3dp" android:layout_weight="1" android:background="#E8E8E8"/>
+            </LinearLayout>
+            <!--  ─── Perks ───  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="6dp" android:gravity="center_vertical" android:orientation="horizontal">
+                <FrameLayout android:layout_width="16dp" android:layout_height="16dp" android:background="@drawable/bg_tick_circle">
+                    <ImageView android:layout_width="9dp" android:layout_height="9dp" android:layout_gravity="center" android:src="@drawable/ic_check" />
+                </FrameLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Free first booking — no commitment" android:textColor="#888888" android:textSize="9sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="18dp" android:gravity="center_vertical" android:orientation="horizontal">
+                <FrameLayout android:layout_width="16dp" android:layout_height="16dp" android:background="@drawable/bg_tick_circle">
+                    <ImageView android:layout_width="9dp" android:layout_height="9dp" android:layout_gravity="center" android:src="@drawable/ic_check" />
+                </FrameLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Reminders &amp; style history saved automatically" android:textColor="#888888" android:textSize="9sp"/>
+            </LinearLayout>
+            <!--  ─── Create Account Button ───  -->
+            <Button android:layout_width="match_parent" android:id="@+id/btnCreateAccount" android:layout_height="48dp" android:layout_marginBottom="18dp" android:background="@drawable/bg_btn_red" android:drawableEnd="@drawable/ic_arrow_right" android:drawablePadding="8dp" android:fontFamily="@font/inter_bold" android:text="Create Account" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="14sp"/>
+            <!--  ─── Divider ───  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:gravity="center_vertical" android:orientation="horizontal">
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#EBEBEB"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10dp" android:paddingEnd="10dp" android:text="Or sign up with" android:textColor="#C8C8C8" android:textSize="10sp"/>
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#EBEBEB"/>
+            </LinearLayout>
+            <!--  ─── Social Buttons ───  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:orientation="horizontal">
+
+                <Space android:layout_width="8dp" android:layout_height="1dp"/>
+                <Button android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/bg_btn_social" android:drawableStart="@drawable/ic_google" android:drawablePadding="6dp" android:fontFamily="@font/inter_semibold" android:text="Google" android:textAllCaps="false" android:textColor="#0A0A0A" android:textSize="10sp"/>
+                <Space android:layout_width="8dp" android:layout_height="1dp"/>
+                <Button android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/bg_btn_github" android:drawableStart="@drawable/ic_github" android:drawablePadding="6dp" android:fontFamily="@font/inter_semibold" android:text="GitHub" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="10sp"/>
+            </LinearLayout>
+            <!--  ─── Login Link ───  -->
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Already have an account? " android:textColor="#888888" android:textSize="11sp"/>
+                <TextView android:id="@+id/txtLogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_bold" android:text="Login" android:textColor="#C62828" android:textSize="11sp"/>
+            </LinearLayout>
+            <!--  Terms note  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="10dp" android:gravity="center" android:lineSpacingMultiplier="1.5" android:text="By signing up you agree to our Terms of Service\n&amp; Privacy Policy" android:textColor="#C8C8C8" android:textSize="9sp"/>        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

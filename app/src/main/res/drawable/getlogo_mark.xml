@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!--  Dashed inner ring  -->
+    <path
+        android:pathData="M 48,16 A 32,32 0 1 1 47.9,16"
+        android:strokeColor="#B13030"
+        android:strokeWidth="1"
+        android:strokeAlpha="0.5" />
+
+    <!--  Scissors blade 1 (top-left to bottom-right)  -->
+    <path
+        android:pathData="M 33,29 L 63,67"
+        android:strokeColor="#B13030"
+        android:strokeWidth="5"
+        android:strokeLineCap="round" />
+
+    <!--  Scissors blade 2 (top-right to bottom-left)  -->
+    <path
+        android:pathData="M 63,29 L 33,67"
+        android:strokeColor="#B13030"
+        android:strokeWidth="5"
+        android:strokeLineCap="round" />
+
+    <!--  Top-left finger ring  -->
+    <path
+        android:pathData="M 33,22 A 7,7 0 1 1 32.9,22"
+        android:strokeColor="#F03131"
+        android:strokeWidth="4" />
+
+    <!--  Top-right finger ring  -->
+    <path
+        android:pathData="M 63,22 A 7,7 0 1 1 62.9,22"
+        android:strokeColor="#B13030"
+        android:strokeWidth="4" />
+
+    <!--  Center pivot dot  -->
+    <path
+        android:pathData="M 48,48 m -3,0 a 3,3 0 1 0 6,0 a 3,3 0 1 0 -6,0"
+        android:fillColor="#FFFFFF" />
+
+</vector>

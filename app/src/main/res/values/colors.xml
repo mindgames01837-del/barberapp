@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#0A0A0A</color>
+    <color name="black_soft">#1A1A1A</color>
+    <color name="gray_dark">#444444</color>
+    <color name="gray_mid">#888888</color>
+    <color name="gray_light">#C8C8C8</color>
+    <color name="gray_ultra">#F2F2F2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#1565C0</color>
+    <color name="blue_mid">#1976D2</color>
+    <color name="blue_light">#E3F2FD</color>
+    <color name="blue_accent">#42A5F5</color>
+    <color name="red">#C62828</color>
+    <color name="red_light">#FFEBEE</color>
+    <color name="red_accent">#EF5350</color>
+    <color name="gold">#F5A623</color>
+    <color name="green_check">#43A047</color>
+    <color name="green_check_bg">#E8F5E9</color>
+    <color name="border_light">#E8E8E8</color>
+    <color name="divider">#EBEBEB</color>
+    <color name="drag_handle">#E0E0E0</color>
+    <color name="facebook_blue">#1877F2</color>
+
+</resources>
